@@ -13,11 +13,11 @@ spec:
       metadata:
         labels:
            app:vprodb
-        spec:
-          containers:
-            - name: vprodb
-            - image: negasi/vprofiledb:V1
-              args:
+      spec:
+        containers:
+           - name: vprodb
+           - image: negasi/vprofiledb:V1
+             args:
               - "ignore-db-dir=lost+found"
             volumeMounts:
               - mountPath: /var/lib/mysql
