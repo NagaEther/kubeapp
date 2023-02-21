@@ -15,10 +15,10 @@ spec:
            app:vprodb
       spec:
         containers:
-           - name: vprodb
-           - image: negasi/vprofiledb:V1
-             args:
-             - 'ignore-db-dir=lost+found'
+          - name: vprodb
+            image: negasi/vprofiledb:V1
+            args:
+               - 'ignore-db-dir=lost+found'
             volumeMounts:
               - mountPath: /var/lib/mysql
                 name: vpro-db-data
