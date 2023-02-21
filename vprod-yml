@@ -1,4 +1,4 @@
-apiVersion: apps/V1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
     name: vprodb
@@ -18,7 +18,7 @@ spec:
           - name: vprodb
             image: negasi/vprofiledb:V1
             args:
-               - 'ignore-db-dir=lost+found'
+               - "--ignore-db-dir=lost+found"
             volumeMounts:
               - mountPath: /var/lib/mysql
                 name: vpro-db-data
@@ -38,5 +38,3 @@ spec:
              awsElasticBlockStore:
                 volumeID: vol-0ac50561851b9d31f
                 fsType: ext4
-
-
